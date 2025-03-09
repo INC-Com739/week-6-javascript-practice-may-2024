@@ -34,10 +34,17 @@ part1.onclick = day1Part1;
 function day1Part2() {
   let playerOne = {};
   playerOne.name = prompt("What is your name?");
-  playerOne.address = prompt("What is your address?");
+playerOne.phone = prompt("What is your phone number?");
   // Try it!
   // TODO: add a new question for the player. Assign the answer to the playerOne Object. 
-  playerOne.age = prompt("What is your phone number?");
+  playerOne.phone = prompt("What is your phone number?");
+  if (playerOne.phone.length < 10) {
+    alert("Your phone number is too short.");
+  }
+  else {
+    alert("Your phone number is long enough.");
+  }
+ 
   
   
 
@@ -64,7 +71,18 @@ function day1Part3() {
   // TODO: make a message based on the answers to the prompt.
   messageParagraph.innerHTML = `Your pet's name is ${pet.name}. It is a ${pet.species} and is ${pet.age} years old. It is ${pet.color}.`;
 }
-
+if (pet.age < 10) {
+  alert("Your pet is young.");
+}
+else {
+  alert("Your pet is old.");
+}
+if (pet.species === "dog") {
+  alert("Your pet is a dog.");
+}
+else {
+  alert("Your pet is not a dog.");
+}
 part3.onclick = day1Part3;
 
 
@@ -79,5 +97,16 @@ function day1Part4() {
 messageParagraph. innerHTML = `Hi, ${playerOne.name}! Your current address is ${playerOne.address}. Your pet's name is ${playerOne.pet}.`;
   
 }
-
+if (playerOne.pet === "dog") {
+  alert("You have a dog.");
+}
+else {
+  alert("You do not have a dog.");
+}
+if (playerOne.address.length < 10) {
+  alert("Your address is too short.");
+}
+else {
+  alert("Your address is long enough.");
+}
 part4.onclick = day1Part4;
