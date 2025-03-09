@@ -11,6 +11,15 @@ function day1Part1() {
   playerOne.hiScore = prompt("What is your all time hi-score?");
   // Try it!
   // TODO: add a new question for the player. Assign the answer to the playerOne Object.
+  playerOne.currentScore = prompt("What is your current score?");
+  {playerOne.currentScore = 0};
+  if (playerOne.currentScore < playerOne.hiScore) {
+    alert("You have not beaten your hi score yet.");
+  }
+  else {
+    alert("You have beaten your hi score!");
+    playerOne.hiScore = playerOne.currentScore;
+  }
 
 
   // Try it!
@@ -23,17 +32,19 @@ part1.onclick = day1Part1;
 
 
 function day1Part2() {
-  let customer = {};
-  customer.name = prompt("What is your name?");
-  customer.address = prompt("What is your address?");
+  let playerOne = {};
+  playerOne.name = prompt("What is your name?");
+  playerOne.address = prompt("What is your address?");
   // Try it!
-  // TODO: add a new question for the player. Assign the answer to the playerOne Object.
+  // TODO: add a new question for the player. Assign the answer to the playerOne Object. 
+  playerOne.age = prompt("What is your phone number?");
+  
   
 
   
   // Try it!
   // TODO: add the answer to the new question to the innerHTML statment below.
-  messageParagraph.innerHTML = `Hi, ${customer.name}! Your current address is ${customer.address}.`;
+  messageParagraph.innerHTML = `Hi, ${playerOne.name}! Your current address is ${playerOne.address}.`;
 }
 part2.onclick = day1Part2;
 
@@ -44,11 +55,16 @@ function day1Part3() {
 
   // Try it!
   // TODO: create a prompt to ask about a pet
+  pet.name = prompt("What is your pet's name?");
+  pet.species = prompt("What is your pet's species?");
+  pet.age = prompt("What is your pet's age?");
+  pet.color = prompt("What is your pet's color?");
 
   // Try it!
   // TODO: make a message based on the answers to the prompt.
-  messageParagraph.innerHTML = ``;
+  messageParagraph.innerHTML = `Your pet's name is ${pet.name}. It is a ${pet.species} and is ${pet.age} years old. It is ${pet.color}.`;
 }
+
 part3.onclick = day1Part3;
 
 
@@ -56,7 +72,11 @@ part3.onclick = day1Part3;
 // TODO: add your own idea for a prompt. Use an object to store the user's response.
 function day1Part4() {
   alert("hello!");
-
+  let playerOne = {};
+  playerOne.name = prompt("What is your name?");
+  playerOne.address = prompt("What is your address?");
+  playerOne.pet = prompt("What is your pet's name?");
+messageParagraph. innerHTML = `Hi, ${playerOne.name}! Your current address is ${playerOne.address}. Your pet's name is ${playerOne.pet}.`;
   
 }
 
